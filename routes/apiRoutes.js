@@ -19,7 +19,7 @@ router.post("/notes", (req, res) => {
       res.json(note);
     })
     .catch((err) => {
-      console.log("working");
+      console.log(err);
       res.status(500).json(err);
     });
 });
