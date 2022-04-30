@@ -1,6 +1,8 @@
+// global variables
 const router = require("express").Router();
 const store = require("../db/store");
 
+// GET route
 router.get("/notes", (req, res) => {
   store
     .getNotes()
@@ -12,6 +14,7 @@ router.get("/notes", (req, res) => {
     });
 });
 
+// POST route
 router.post("/notes", (req, res) => {
   store
     .addNotes(req.body)
